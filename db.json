@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Apprendre React",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Créer TaskFlow",
+      "completed": true
+    }
+  ]
+}
