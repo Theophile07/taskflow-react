@@ -1,14 +1,33 @@
 {
-  "tasks": [
-    {
-      "id": 1,
-      "title": "Apprendre React",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "title": "Créer TaskFlow",
-      "completed": true
-    }
-  ]
+    "utilisateurs": [
+{
+"id": 1,
+"nom": "Shammah Ndjibu",
+"email": "shammah@primetek.cd",
+"motDePasse": "1234"
+}
+],
+"projets": [
+{
+"id": 1,
+"utilisateurId": 1,
+"nom": "Site vitrine Nguvu",
+"description": "Refonte complète du site institutionnel de l'agence.",
+"couleur": "#21C7A5",
+"creeLe": "2026-09-01"
+}
+],
+"taches": [
+{
+"id": 1,
+"projetId": 1,
+"titre": "Intégrer le formulaire de contact",
+"description": "Validation des champs obligatoires et envoi.",
+"statut": "en_cours",
+"priorite": "haute",
+"echeance": "2026-09-12",
+"creeLe": "2026-09-02",
+"modifieLe": "2026-09-04"
+}
+]
 }
