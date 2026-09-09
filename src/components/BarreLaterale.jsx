@@ -1,5 +1,7 @@
 import React from "react"
 import { LayoutDashboard, CheckSquare, FolderKanban, Settings } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+
 
 function BarreLaterale(){
     const navitem = [{
@@ -7,16 +9,19 @@ function BarreLaterale(){
         icon: LayoutDashboard,
         label: "Tableau de bord",
         active: true,
+        path: "/dashboard",
     },
     {
         id: "project",
         icon: FolderKanban,
         label: "Mes projets",
+        path: "/projets",
     },
     {
         id: "tasks",
         icon: CheckSquare,
         label: "Toutes les tâches",
+        path: "/taches",
     },
     {
         id: "settings",
@@ -44,16 +49,14 @@ function BarreLaterale(){
 
                 <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
                     {navitem.map((item) => (
-                        <div key={item.id}>
-                        <button
-                            className="w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200
+                        <NavLink key={item.id} to={item.path}
+                        className="w-full flex items-center justify-between p-3 rounded-xl transition-all duration-200
                             hover:bg-slate-100 dark:hover:bg-slate-800">
-                            <div className="flex items-center space-x-3">
-                            <item.icon className="w-5 h-5 text-slate-800 dark:text-white" />
-                            <span className="text-slate-800 dark:text-white font-medium ml-2">{item.label}</span>
-                            </div>
-                        </button>
-                        </div>
+                                <div className="flex items-center space-x-3">
+                                    <item.icon className="w-5 h-5 text-slate-800 dark:text-white" />
+                                    <span className="text-slate-800 dark:text-white font-medium ml-2">{item.label}</span>
+                                </div>
+                        </NavLink>
                     ))}
                 </nav>
 

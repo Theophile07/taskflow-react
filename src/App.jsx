@@ -1,6 +1,7 @@
 import React from "react"
+import { Outlet } from "react-router-dom";
 import BarreLaterale from "./components/BarreLaterale"
-import Dashboard from "./pages/Dashboard"
+
 
 function App() {
   
@@ -13,7 +14,7 @@ function App() {
           <BarreLaterale/>
           <main className="flex-1 overflow-y-auto bg-transparent">
             <div className="p-6 space-y-6 ">
-              <Dashboard/>
+              <Outlet/>
             </div>
           </main>
         </div>
