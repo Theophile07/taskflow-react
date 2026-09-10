@@ -1,6 +1,6 @@
 import React from "react"
 import { LayoutDashboard, CheckSquare, FolderKanban, Settings } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 function BarreLaterale(){

@@ -4,7 +4,7 @@ function CardInfo({titre}){
     return(
         <>
         <div >
-            <div className="bg-white dark:bg-neutral-900 p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-sm transition-all cursor-default group overflow-hidden relative">
+            <div className="bg-white dark:bg-neutral-900 p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-sm transition-all duration-300 cursor-default group overflow-hidden relative hover:scale-101">
                 <div className="flex items-center gap-4 relative z-10">
                     {/* <div className="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-500/20">
                         <FolderKanban/>

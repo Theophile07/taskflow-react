@@ -7,6 +7,10 @@ import App from './App.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Projets from './pages/Projets.jsx'
 import DetailProjets from './pages/DetailProjet.jsx'
+import Connexion from './pages/Connexion.jsx'
+import Inscription from './pages/Inscription.jsx'
+import ProtectedRoute from './components/ RoutePrivee.jsx'
+import { AuthProvider } from './context/AuthContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,22 +19,42 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard",
-        element: <Dashboard />
+        element: (<ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>)
       },
       {
         path: "projets",
-        element: <Projets />
+        element: (
+          <ProtectedRoute>
+            <Projets />
+          </ProtectedRoute>
+        )
       },
       {
         path: "taches",
-        element: <DetailProjets />
+        element: (
+          <ProtectedRoute>
+            <DetailProjets />
+          </ProtectedRoute>
+        )
       }
     ]
+  },
+  {
+    path:"/connexion",
+    element:<Connexion/>
+  },
+  {
+    path:"/inscription",
+    element:<Inscription/>
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </StrictMode>
 )

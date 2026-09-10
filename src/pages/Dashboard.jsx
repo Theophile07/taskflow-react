@@ -22,7 +22,7 @@ function Dashboard(){
                     </div>
 
                     <div>
-                        <button className="bg-white text-blue-600 hover:bg-blue-50 px-5 py-2.5 rounded-xl font-medium transition-all shadow-sm flex items-center gap-2">
+                        <button className="bg-white text-blue-600 hover:bg-blue-50 px-5 py-2.5 rounded-xl font-medium transition-all duration-300 hover:scale-101 shadow-sm flex items-center gap-2">
                             <Plus/>
                             Nouvelle tâche
                         </button>
